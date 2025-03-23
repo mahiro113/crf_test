@@ -22,6 +22,8 @@ jobs:
       - name: deploy cloud function
         run: |
           gcloud functions deploy cfr_test \
+            --gen2 \
+            --project=${{ secrets.GCP_PROJECT_ID }}
             --runtime python311 \
             --trigger-bucket cfr_test \
             --region asia-northeast1 \
