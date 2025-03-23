@@ -6,8 +6,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - run: echo "Hello world"
-
       - name: Set up Google Cloud SDK
         uses: google-github-actions/auth@v2
         with:
