@@ -20,3 +20,12 @@ jobs:
 
       - name: Use gcloud CLI
         run: gcloud config list
+
+      - name: deploy cloud function
+        run: |
+          gcloud functions deploy cfr_test \
+            --runtime python311 \
+            --trigger-bucket cfr_test \
+            --region asia-northeast1 \
+            --entry-point main \
+            --source ./cloudfunctions/aa
