@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - run: echo "Hello world"
 
       - name: Set up Google Cloud SDK
@@ -19,4 +19,4 @@ jobs:
           project_id: ${{ secrets.GCP_PROJECT_ID }}
 
       - name: Use gcloud CLI
-        run: gcloud info
+        run: gcloud config list
